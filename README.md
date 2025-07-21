@@ -6,6 +6,8 @@ This repository contains the implementation of a Convolutional Neural Network (C
 
 This project uses a Convolutional Neural Network (CNN) to classify images as either a cat or a dog. The model is trained on a labeled dataset consisting of images of cats and dogs, and the goal is to correctly predict the class (cat or dog) for new, unseen images. The training dataset contains 8000 images - 4000 of dogs and 4000 of cats. The validation dataset contains 2000 images where 1000 images belong to each class.
 
+<a href="https://www.dropbox.com/scl/fi/ppd8g3d6yoy5gbn960fso/dataset.zip?rlkey=lqbqx7z6i9hp61l6g731wgp4v&e=1&st=gdn6pydw&dl=0">Dataset link</a>
+
 ## ⚙️ Technologies Used
 
 - Python
