@@ -50,7 +50,7 @@ img_array = np.expand_dims(img_array, axis=0) / 255.0
 
 # Predict
 prediction = model.predict(img_array)
-label = 'Dog 🐶' if prediction[0][0] > 0.5 else 'Cat 🐱'
+label = 'Dog 🐶' if prediction[0][0] > 0.6 else 'Cat 🐱'
 print(f'This image is a: {label}')
 ```
 
