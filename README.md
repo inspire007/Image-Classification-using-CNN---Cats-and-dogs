@@ -30,8 +30,29 @@ The CNN model consists of several layers, including convolutional layers, max-po
 
 ## 📈 Model Performance
 
-- **Training Accuracy**: `85.15%`
-- **Test Accuracy**: `78.50%`
+- **Training Accuracy**: `85.19%`
+- **Test Accuracy**: `80.40%`
+
+## 📦 Using the pre-trained model
+The repository includes an h5 file that can be used as a pre-trained model to classify images of cats and dogs. A sample code snippet is given below-
+```
+import tensorflow as tf
+from tensorflow.keras.preprocessing import image
+import numpy as np
+
+# Load pre-trained model
+model = tf.keras.models.load_model('cat_dog_model.h5')
+
+# Load and preprocess image
+img = image.load_img('your_image.jpg', target_size=(64, 64))
+img_array = image.img_to_array(img)
+img_array = np.expand_dims(img_array, axis=0) / 255.0
+
+# Predict
+prediction = model.predict(img_array)
+label = 'Dog 🐶' if prediction[0][0] > 0.5 else 'Cat 🐱'
+print(f'This image is a: {label}')
+```
 
 ## ✨ Future Improvements
 
